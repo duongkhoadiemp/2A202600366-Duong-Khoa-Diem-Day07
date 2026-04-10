@@ -117,9 +117,10 @@ Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 |-----------|----------|----------------------|-----------|----------|
 | **Dương Khoa Điềm (Tôi)** | RecursiveChunker (~400 chars) | 7.9 | Giữ được ngữ cảnh cụm Q&A tương đối ổn. | Tuỳ biến sai sót separator khiến một số câu dài bị đứt vụn, điểm chưa cao. |
 | Tuyền | Recursive (350 chars) | 8.77 | Giữ context, Q&A coherent, score cao | Số chunk nhiều (654), tốn memory |
-| Thế Anh | Recursive (250 chars) | 8.752 | Giữ context, Q&A coherent, score cao | Số chunk nhiều, tốn memory |
+| Thế Anh | Recursive (250 chars) | 8.752 | Trích xuất chính xác, duy trì được thông tin quan trọng | Số chunk nhiều, dẫn đến dư thừa dữ liệu do overlap |
 | Võ Thanh Chung | RecursiveChunker (250 chars) | 8.0 | Giữ cấu trúc tự nhiên, chunk đều | Có thể cắt ngang câu dài |
 | Nguyễn Hồ Bảo Thiên | FixedSizeChunker (chunk_size=100, overlap=20) | 8.56 | Xử lý nhanh | Dễ ngắt câu giữa chừng, gây mất ngữ nghĩa |
+| le khang | Recursive | 9 | giữ context tốt | phức tạp hơn |
 
 **Strategy nào tốt nhất cho domain này? Tại sao?**
 
